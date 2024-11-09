@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-08T14:09:58.756Z",
+    "end": "2021-08-08T14:10:18.017Z",
+    "duration": 19261,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bd2aa946-3eaa-49c5-a4a5-aeffc4a16019",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day02_login_test.js",
+      "file": "cypress/integration/com.techproed/day02_login_test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c6b8efb1-73ee-478b-b41b-63e8a4a3f789",
+          "title": "Log in",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login negatif",
+              "fullTitle": "Log in login negatif",
+              "timedOut": null,
+              "duration": 5386,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://test.iyikisordun.com/login.php\");\ncy.get('[type=\"email\"]').type(eMail);\ncy.get('[type=\"password\"]').type(pass);\ncy.get('.btn').click();\ncy.get('#fail').should('include.text', 'Girdiğiniz bilgiler hatalıdır.'); //fail bekledigimiz durumlarda kullanabiliriz",
+              "err": {},
+              "uuid": "17de0d16-957d-47a3-86e7-5beec9e9b25c",
+              "parentUUID": "c6b8efb1-73ee-478b-b41b-63e8a4a3f789",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login pozitif",
+              "fullTitle": "Log in login pozitif",
+              "timedOut": null,
+              "duration": 10952,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://test.iyikisordun.com/login.php');\ncy.get('[type=\"email\"]').type(eMailthrue);\ncy.get('[type=\"password\"]').type(passthrue);\ncy.get('.btn').click();\ncy.get('.m-0').should('have.text', 'Dashboard');\ncy.url().should('include', 'index.php');",
+              "err": {},
+              "uuid": "53eca3fe-bafb-47af-a313-ef4f5fa4ae33",
+              "parentUUID": "c6b8efb1-73ee-478b-b41b-63e8a4a3f789",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "17de0d16-957d-47a3-86e7-5beec9e9b25c",
+            "53eca3fe-bafb-47af-a313-ef4f5fa4ae33"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16338,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 2,
+    "failures": -2,
+    "start": "2021-08-08T14:21:16.246Z",
+    "end": "2021-08-08T14:21:33.457Z",
+    "duration": 17211,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 66.66666666666666,
+    "other": 2,
+    "hasOther": true,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "b36b00e9-52ed-4f94-b5eb-620fcd5e85d9",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day05_file_upload.js",
+      "file": "cypress/integration/com.techproed/day05_file_upload.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d1714148-51a6-48e7-924f-7ab298a8ec8c",
+          "title": "file upload",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "tek dosya yukleme",
+              "fullTitle": "file upload tek dosya yukleme",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "b0569460-5742-4b5c-8089-7214dbcd24c4",
+              "parentUUID": "d1714148-51a6-48e7-924f-7ab298a8ec8c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Çoklu Dosya Yukleme",
+              "fullTitle": "file upload Çoklu Dosya Yukleme",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "158f2c35-f5a3-4f91-94a3-43be8675d54c",
+              "parentUUID": "d1714148-51a6-48e7-924f-7ab298a8ec8c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "override file name",
+              "fullTitle": "file upload override file name",
+              "timedOut": null,
+              "duration": 12889,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://davidwalsh.name/demo/multiple-file-upload.php\");\nconst path1 = \"image01.jpeg\";\ncy.get(\"#filesToUpload\").attachFile({\n  filePath: path1,\n  fileName: \"yeniisim.jpg\"\n});\ncy.get(\"#fileList > li\").should(\"have.text\", \"yeniisim.jpg\"); //veya cy.contains(\"yeniisim.jpeg\").should(\"be.visible\")",
+              "err": {},
+              "uuid": "4ad7160a-9982-4565-83a4-7f19ce3974e3",
+              "parentUUID": "d1714148-51a6-48e7-924f-7ab298a8ec8c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4ad7160a-9982-4565-83a4-7f19ce3974e3"
+          ],
+          "failures": [],
+          "pending": [
+            "b0569460-5742-4b5c-8089-7214dbcd24c4",
+            "158f2c35-f5a3-4f91-94a3-43be8675d54c"
+          ],
+          "skipped": [],
+          "duration": 12889,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

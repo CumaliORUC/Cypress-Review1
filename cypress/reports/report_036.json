@@ -1,0 +1,131 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-08-08T14:18:24.212Z",
+    "end": "2021-08-08T14:20:21.614Z",
+    "duration": 117402,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e4aa59e7-6678-4ac5-8083-867d1c986e54",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day05_amazon_search.js",
+      "file": "cypress/integration/com.techproed/day05_amazon_search.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "961de82f-8077-4b5b-99c6-7113e64c6b6f",
+          "title": "search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "amazon search",
+              "fullTitle": "search amazon search",
+              "timedOut": null,
+              "duration": 60838,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.amazonSearch(\"imac\"); //cy.amazonSearch(\"iphone\");\n//Assertions\n// 1)\ncy.get(\".a-section > .a-color-state\").contains(\"imac\"); //2)\n//cy.get(\".a-section > .a-color-state\").should(\"have.text\", '“imac”' )",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://www.amazon.com/__cypress/runner/cypress_runner.js:139540:13)\n    at https://www.amazon.com/__cypress/runner/cypress_runner.js:140560:16\n    at tryCatcher (https://www.amazon.com/__cypress/runner/cypress_runner.js:10798:23)\n    at https://www.amazon.com/__cypress/runner/cypress_runner.js:5920:41\n    at tryCatcher (https://www.amazon.com/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://www.amazon.com/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://www.amazon.com/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://www.amazon.com/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://www.amazon.com/__cypress/runner/cypress_runner.js:8911:18)\n    at _drainQueueStep (https://www.amazon.com/__cypress/runner/cypress_runner.js:5505:12)\n    at _drainQueue (https://www.amazon.com/__cypress/runner/cypress_runner.js:5498:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.amazon.com/__cypress/runner/cypress_runner.js:5514:5)\n    at Async.drainQueues (https://www.amazon.com/__cypress/runner/cypress_runner.js:5384:14)\nFrom Your Spec Code:\n    at Context.eval (https://www.amazon.com/__cypress/tests?p=cypress\\support\\index.js:138:6)",
+                "diff": null
+              },
+              "uuid": "371efa26-18d3-4213-86b1-b8ce595c6333",
+              "parentUUID": "961de82f-8077-4b5b-99c6-7113e64c6b6f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test 2",
+              "fullTitle": "search test 2",
+              "timedOut": null,
+              "duration": 430,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "b42fbf62-081f-45b7-bf10-870149036098",
+              "parentUUID": "961de82f-8077-4b5b-99c6-7113e64c6b6f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b42fbf62-081f-45b7-bf10-870149036098"
+          ],
+          "failures": [
+            "371efa26-18d3-4213-86b1-b8ce595c6333"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 61268,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

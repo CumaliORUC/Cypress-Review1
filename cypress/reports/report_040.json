@@ -1,0 +1,150 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-08-08T14:22:38.806Z",
+    "end": "2021-08-08T14:24:11.670Z",
+    "duration": 92864,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d53e732a-4a89-4d33-9ba5-c8d5b4138dce",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day06_viewport.js",
+      "file": "cypress/integration/com.techproed/day06_viewport.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bbded98e-e509-4b07-85aa-2f93705fd0f5",
+          "title": "viewport",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "iphone6",
+              "fullTitle": "viewport iphone6",
+              "timedOut": null,
+              "duration": 43933,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.amazon.com');\ncy.viewport('iphone8'); //ıphone 8 nasıl gorulur onu gosterir.\ncy.screenshot;",
+              "err": {
+                "message": "CypressError: `cy.viewport()` could not find a preset for: `iphone8`. Available presets are: macbook-16, macbook-15, macbook-13, macbook-11, ipad-2, ipad-mini, iphone-xr, iphone-x, iphone-6+, iphone-se2, iphone-8, iphone-7, iphone-6, iphone-5, iphone-4, iphone-3, samsung-s10, samsung-note9\n\nhttps://on.cypress.io/viewport",
+                "estack": "CypressError: `cy.viewport()` could not find a preset for: `iphone8`. Available presets are: macbook-16, macbook-15, macbook-13, macbook-11, ipad-2, ipad-mini, iphone-xr, iphone-x, iphone-6+, iphone-se2, iphone-8, iphone-7, iphone-6, iphone-5, iphone-4, iphone-3, samsung-s10, samsung-note9\n\nhttps://on.cypress.io/viewport\n    at getPresetDimensions (https://www.amazon.com/__cypress/runner/cypress_runner.js:143266:30)\n    at Context.viewport (https://www.amazon.com/__cypress/runner/cypress_runner.js:143294:28)\nFrom Your Spec Code:\n    at Context.eval (https://www.amazon.com/__cypress/tests?p=cypress\\integration\\com.techproed\\day06_viewport.js:103:8)",
+                "diff": null
+              },
+              "uuid": "58e34d9e-4cd9-49b8-ad12-57a4cd503468",
+              "parentUUID": "bbded98e-e509-4b07-85aa-2f93705fd0f5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "imac",
+              "fullTitle": "viewport imac",
+              "timedOut": null,
+              "duration": 18146,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.amazon.com\");\ncy.viewport(\"macbook-16\");",
+              "err": {},
+              "uuid": "53944019-7590-4bd2-9907-b2ff401a9e93",
+              "parentUUID": "bbded98e-e509-4b07-85aa-2f93705fd0f5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "custom",
+              "fullTitle": "viewport custom",
+              "timedOut": null,
+              "duration": 21824,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.amazon.com\");\ncy.viewport(2500, 1500);\ncy.screenshot;",
+              "err": {},
+              "uuid": "8b123c19-3a0a-4fb7-9688-f53ae844c5d8",
+              "parentUUID": "bbded98e-e509-4b07-85aa-2f93705fd0f5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "53944019-7590-4bd2-9907-b2ff401a9e93",
+            "8b123c19-3a0a-4fb7-9688-f53ae844c5d8"
+          ],
+          "failures": [
+            "58e34d9e-4cd9-49b8-ad12-57a4cd503468"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 83903,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

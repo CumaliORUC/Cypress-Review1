@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-08T14:14:29.035Z",
+    "end": "2021-08-08T14:14:52.612Z",
+    "duration": 23577,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "41ece58b-f81b-402c-94b9-bc5fe1eaf0bb",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day04_draganddrop.js",
+      "file": "cypress/integration/com.techproed/day04_draganddrop.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7bce9555-b802-447e-8bd0-602a6881d0ea",
+          "title": "drag and drop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "double click",
+              "fullTitle": "drag and drop double click",
+              "timedOut": null,
+              "duration": 11381,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.testandquiz.com/selenium/testing.html');\ncy.get('#dblClkBtn').dblclick(); //cift tiklama\ncy.get('#dblClkBtn').rightclick(); //sag tiklama\ncy.on('window:alert', str => {\n  //Assert\n  //1)\n  expect(str).to.equal(\"hi, JavaTpoint Testing\"); //2)\n  expect(str).to.eq(\"hi, JavaTpoint Testing\"); //3)\n  expect(str).to.contains(\"hi, JavaTpoint Testing\");\n});",
+              "err": {},
+              "uuid": "7fa00d4c-4c74-4b4c-aef2-c1bc2059aeba",
+              "parentUUID": "7bce9555-b802-447e-8bd0-602a6881d0ea",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "drag and drop",
+              "fullTitle": "drag and drop drag and drop",
+              "timedOut": null,
+              "duration": 2467,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// 1) Terminalden: npm install --save-dev @4tw/cypress-drag-drop\n// 2) import ‘@4tw/cypress-drag-drop’\ncy.visit(\"https://www.testandquiz.com/selenium/testing.html\");\ncy.get(\"#sourceImage\") //suruklenecek element\n.drag(\"#targetDiv\"); //suruklenecegi yer",
+              "err": {},
+              "uuid": "325ab645-f634-4fd2-8f3f-5cc0dd76ece7",
+              "parentUUID": "7bce9555-b802-447e-8bd0-602a6881d0ea",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7fa00d4c-4c74-4b4c-aef2-c1bc2059aeba",
+            "325ab645-f634-4fd2-8f3f-5cc0dd76ece7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13848,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-08T14:00:12.474Z",
+    "end": "2021-08-08T14:00:27.314Z",
+    "duration": 14840,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9f71f7ba-08be-485b-9ee8-760385b620b4",
+      "title": "",
+      "fullFile": "cypress/integration/2-advanced-examples/aliasing.spec.js",
+      "file": "cypress/integration/2-advanced-examples/aliasing.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "037ec722-beeb-479a-b4da-1f6c9c6e8b6b",
+          "title": "Aliasing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": ".as() - alias a DOM element for later use",
+              "fullTitle": "Aliasing .as() - alias a DOM element for later use",
+              "timedOut": null,
+              "duration": 9505,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/as\n// Alias a DOM element for use later\n// We don't have to traverse to the element\n// later in our code, we reference it with @\ncy.get('.as-table').find('tbody>tr').first().find('td').first().find('button').as('firstBtn'); // when we reference the alias, we place an\n// @ in front of its name\ncy.get('@firstBtn').click();\ncy.get('@firstBtn').should('have.class', 'btn-success').and('contain', 'Changed');",
+              "err": {},
+              "uuid": "844531e6-cb0c-4a08-bcd0-c0d5e04df55e",
+              "parentUUID": "037ec722-beeb-479a-b4da-1f6c9c6e8b6b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": ".as() - alias a route for later use",
+              "fullTitle": "Aliasing .as() - alias a route for later use",
+              "timedOut": null,
+              "duration": 2777,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Alias the route to wait for its response\ncy.intercept('GET', '**/comments/*').as('getComment'); // we have code that gets a comment when\n// the button is clicked in scripts.js\ncy.get('.network-btn').click(); // https://on.cypress.io/wait\ncy.wait('@getComment').its('response.statusCode').should('eq', 200);",
+              "err": {},
+              "uuid": "46050d51-c188-4072-af8e-4315ccab7fb9",
+              "parentUUID": "037ec722-beeb-479a-b4da-1f6c9c6e8b6b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "844531e6-cb0c-4a08-bcd0-c0d5e04df55e",
+            "46050d51-c188-4072-af8e-4315ccab7fb9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12282,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

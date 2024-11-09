@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 1,
+    "failures": -1,
+    "start": "2021-08-08T14:16:04.897Z",
+    "end": "2021-08-08T14:17:17.366Z",
+    "duration": 72469,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "1282e35d-e06c-4594-9371-a00a9633dbe4",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day04_multpleWindows.js",
+      "file": "cypress/integration/com.techproed/day04_multpleWindows.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "663264ba-965b-4246-9e97-9a4598350e44",
+          "title": "multiple Windows",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "removing target",
+              "fullTitle": "multiple Windows removing target",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "f7d36f61-f37c-485d-9edd-9de350b3b850",
+              "parentUUID": "663264ba-965b-4246-9e97-9a4598350e44",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "yeni urlde acma",
+              "fullTitle": "multiple Windows yeni urlde acma",
+              "timedOut": null,
+              "duration": 68824,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://the-internet.herokuapp.com/windows\");\ncy.wait(3000);\ncy.get(\".example > a\").then(element => {\n  const newUrl = element.prop('href'); //gidilecek sayfanın linkini prop() ile aldık başka bir degere atadık ve ordan visit ile buraya git diyoruz. \n  // \n  cy.visit(newUrl);\n}); //ve assertion\ncy.get('h3').should('have.text', 'New Window');",
+              "err": {},
+              "uuid": "a690f8ce-91df-4b11-b8e8-03905061f4a1",
+              "parentUUID": "663264ba-965b-4246-9e97-9a4598350e44",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a690f8ce-91df-4b11-b8e8-03905061f4a1"
+          ],
+          "failures": [],
+          "pending": [
+            "f7d36f61-f37c-485d-9edd-9de350b3b850"
+          ],
+          "skipped": [],
+          "duration": 68824,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

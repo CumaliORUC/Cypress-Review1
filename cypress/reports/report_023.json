@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-08T14:08:45.198Z",
+    "end": "2021-08-08T14:09:33.774Z",
+    "duration": 48576,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "117d2f94-13a3-476e-aefb-d3959e502c0b",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day02_assert.js",
+      "file": "cypress/integration/com.techproed/day02_assert.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1a11c617-3c7b-405b-b67d-4be4ec91f420",
+          "title": "Crystal Key Hotel",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Case01",
+              "fullTitle": "Crystal Key Hotel Test Case01",
+              "timedOut": null,
+              "duration": 42783,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://qa-environment.koalaresorthotels.com/\");\ncy.contains('Log in').click(); //Assertions  \n//1-\ncy.url().should('include', 'Account/Logon'); //1) cy.url().should(‘include’\ncy.url().should('include', 'Account/Logon'); //url ‘Account/Logon’ iceriyor mu\n//2) have.text\ncy.get(\"#navLogon > .nav-link\").should('have.text', 'Log in'); //locate edilen yerdeki metinde ‘Log in’ yaziyor mu\n//3) be.visible\ncy.get(\".row > .mb-4\").should(\"be.visible\"); //locate edilen yerde metin var mi veya gorunur mu\n//4) should(‘eq’\ncy.title().should('eq', 'KoalaResortHotels - Log in'); // title buna esit mi ->‘KoalaResortHotels - Log in’\n// 5) should(‘include.text’\ncy.get('.row > .mb-4').should('include.text', 'Log in'); // locate edilen yerde ‘Log in’ text olarak var mi\n//terminal de npx cypress run dersek tum testleri çalıştırır.",
+              "err": {},
+              "uuid": "daaef2f5-e055-45dd-9c35-52fbf72309e1",
+              "parentUUID": "1a11c617-3c7b-405b-b67d-4be4ec91f420",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "daaef2f5-e055-45dd-9c35-52fbf72309e1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 42783,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

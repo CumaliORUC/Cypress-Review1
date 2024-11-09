@@ -1,0 +1,20 @@
+{
+  "chromeWebSecurity": false,
+
+  "projectId": "4foq2o",
+
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "reportFilename":"report",
+    "charts": true,
+    "overwrite": false,
+    "html": true,
+    "json": true
+  },
+  "video":false,
+  "retries": {
+            "runMode": 2,
+            "openMode": 0
+          }
+}
